@@ -9,7 +9,7 @@ export const StyledNavContainer = styled.div`
   padding-left: 60px;
   padding-right: 60px;
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
