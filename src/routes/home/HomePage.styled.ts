@@ -40,13 +40,14 @@ export const StyledHeroButton = styled.button`
 export const StyledProductsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 80%;
   justify-content: space-around;
-  margin-top: 36px;
+  margin-top: 54px;
+  margin-bottom: 18px;
 `;
 
 export const StyledProduct = styled.img`
-  width: 8vw;
+  width: 10vw;
   height: 12vw;
   border-radius: 25px;
   cursor: pointer;

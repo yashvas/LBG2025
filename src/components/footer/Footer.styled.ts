@@ -7,6 +7,7 @@ export const StyledFooterContainer = styled.footer`
   background-color: #11b67a;
   padding: 24px 60px;
   width: 100%;
+  height: 2vh;
   flex-wrap: wrap;
   align-items: center;
 `;

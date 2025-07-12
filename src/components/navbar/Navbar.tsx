@@ -13,7 +13,9 @@ export default function Navbar() {
       <StyledLogo src={logo} />
       <StyledNavItemsContainer>
         <StyledNavItem href={routes.Home}>Home</StyledNavItem>
-        <StyledNavItem>Sustainability</StyledNavItem>
+        <StyledNavItem href={routes.Sustainability}>
+          Sustainability
+        </StyledNavItem>
         <StyledNavItem>Mobile Banking</StyledNavItem>
         <StyledNavItem>Careers</StyledNavItem>
       </StyledNavItemsContainer>

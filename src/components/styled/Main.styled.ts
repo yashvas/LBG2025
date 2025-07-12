@@ -10,4 +10,5 @@ export const Main = styled.div`
   height: 100vh;
   margin: 0 auto;
   background-color: #1e1e1e;
+  padding-bottom: 2vh;
 `;
