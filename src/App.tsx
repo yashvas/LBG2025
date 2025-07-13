@@ -4,16 +4,30 @@ import HomePage from "./routes/home/HomePage";
 import * as routes from "./routes/manifest";
 import Footer from "./components/footer/Footer";
 import SustainabilityPage from "./routes/sustainability/SustainabilityPage";
+import styled from "styled-components";
+import CareersPage from "./routes/careers/CareersPage";
+
+const AppLayout = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path={routes.Home} element={<HomePage />} />
-        <Route path={routes.Sustainability} element={<SustainabilityPage />} />
-      </Routes>
-      <Footer />
+      <AppLayout>
+        <Navbar />
+        <Routes>
+          <Route path={routes.Home} element={<HomePage />} />
+          <Route
+            path={routes.Sustainability}
+            element={<SustainabilityPage />}
+          />
+          <Route path={routes.Careers} element={<CareersPage />} />
+        </Routes>
+        <Footer />
+      </AppLayout>
     </BrowserRouter>
   );
 }

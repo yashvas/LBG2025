@@ -18,7 +18,8 @@ export const StyledHeroButton = styled.button`
   left: 5%;
   color: white;
   max-width: 10vw;
-  background-color: #11b67a;
+  background-color: white;
+  color: black;
 
   &:hover {
     background-color: #0e9e6a;

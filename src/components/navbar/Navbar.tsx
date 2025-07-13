@@ -16,8 +16,7 @@ export default function Navbar() {
         <StyledNavItem href={routes.Sustainability}>
           Sustainability
         </StyledNavItem>
-        <StyledNavItem>Mobile Banking</StyledNavItem>
-        <StyledNavItem>Careers</StyledNavItem>
+        <StyledNavItem href={routes.Careers}>Careers</StyledNavItem>
       </StyledNavItemsContainer>
     </StyledNavContainer>
   );

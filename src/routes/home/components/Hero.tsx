@@ -15,10 +15,10 @@ export default function Hero() {
         <StyledHeroImage src={heroImage} />
         <StyledHeroButton
           onClick={() => {
-            navigate(routes.MobileBanking);
+            navigate(routes.Careers);
           }}
         >
-          Explore mobile banking
+          Explore our careers!
         </StyledHeroButton>
       </HeroContainer>
     </>

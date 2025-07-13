@@ -39,6 +39,7 @@ export const SlideSupportiveText = styled.p`
   font-size: clamp(4px, 3vw, 16px);
   color: black;
   top: 75%;
+  max-width: 35vw;
   left: 21%;
 `;
 
