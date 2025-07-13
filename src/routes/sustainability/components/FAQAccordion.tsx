@@ -38,27 +38,101 @@ export default function FAQAccordion() {
 
   return (
     <FAQContainer>
-      {faqs.map(({ question, answer }, i) => (
-        <div key={i}>
-          <Question
-            isOpen={openIndex === i}
-            onClick={() => toggleIndex(i)}
-            aria-expanded={openIndex === i}
-            aria-controls={`faq-answer-${i}`}
-            id={`faq-question-${i}`}
-          >
-            {question}
-          </Question>
-          <Answer
-            isOpen={openIndex === i}
-            id={`faq-answer-${i}`}
-            role="region"
-            aria-labelledby={`faq-question-${i}`}
-          >
-            {answer}
-          </Answer>
-        </div>
-      ))}
+      <div>
+        <Question
+          isOpen={openIndex === 0}
+          onClick={() => toggleIndex(0)}
+          aria-expanded={openIndex === 0}
+          aria-controls="faq-answer-0"
+          id="faq-question-0"
+        >
+          {faqs[0].question}
+        </Question>
+        <Answer
+          isOpen={openIndex === 0}
+          id="faq-answer-0"
+          role="region"
+          aria-labelledby="faq-question-0"
+        >
+          {faqs[0].answer}
+        </Answer>
+      </div>
+      <div>
+        <Question
+          isOpen={openIndex === 1}
+          onClick={() => toggleIndex(1)}
+          aria-expanded={openIndex === 1}
+          aria-controls="faq-answer-1"
+          id="faq-question-1"
+        >
+          {faqs[1].question}
+        </Question>
+        <Answer
+          isOpen={openIndex === 1}
+          id="faq-answer-1"
+          role="region"
+          aria-labelledby="faq-question-1"
+        >
+          {faqs[1].answer}
+        </Answer>
+      </div>
+      <div>
+        <Question
+          isOpen={openIndex === 2}
+          onClick={() => toggleIndex(2)}
+          aria-expanded={openIndex === 2}
+          aria-controls="faq-answer-2"
+          id="faq-question-2"
+        >
+          {faqs[2].question}
+        </Question>
+        <Answer
+          isOpen={openIndex === 2}
+          id="faq-answer-2"
+          role="region"
+          aria-labelledby="faq-question-2"
+        >
+          {faqs[2].answer}
+        </Answer>
+      </div>
+      <div>
+        <Question
+          isOpen={openIndex === 3}
+          onClick={() => toggleIndex(3)}
+          aria-expanded={openIndex === 3}
+          aria-controls="faq-answer-3"
+          id="faq-question-3"
+        >
+          {faqs[3].question}
+        </Question>
+        <Answer
+          isOpen={openIndex === 3}
+          id="faq-answer-3"
+          role="region"
+          aria-labelledby="faq-question-3"
+        >
+          {faqs[3].answer}
+        </Answer>
+      </div>
+      <div>
+        <Question
+          isOpen={openIndex === 4}
+          onClick={() => toggleIndex(3)}
+          aria-expanded={openIndex === 4}
+          aria-controls="faq-answer-4"
+          id="faq-question-4"
+        >
+          {faqs[4].question}
+        </Question>
+        <Answer
+          isOpen={openIndex === 4}
+          id="faq-answer-4"
+          role="region"
+          aria-labelledby="faq-question-4"
+        >
+          {faqs[4].answer}
+        </Answer>
+      </div>
     </FAQContainer>
   );
 }

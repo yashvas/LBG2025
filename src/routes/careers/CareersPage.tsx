@@ -112,7 +112,7 @@ export default function CareersPage() {
         <StyledSectionHeader>Senior Level Careers</StyledSectionHeader>
       </StyledHeaderContainer>
       <StyledJobsRow>
-        {seniorLevelJobs.map((item) => (
+        {midLevelJobs.map((item) => (
           <StyledJobContainer>
             <StyledCareerImage src={earlyCareersImage} />
             <StyledJobTitle>{item.jobTitle}</StyledJobTitle>

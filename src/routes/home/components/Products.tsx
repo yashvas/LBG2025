@@ -25,7 +25,7 @@ export default function Products() {
   const productText = [
     "Taking out a mortgage with Lloyds means partnering with a trusted lender that offers competitive rates, flexible repayment options, and expert support every step of the way. Whether you're a first-time buyer or looking to remortgage, Lloyds makes the process simple and transparent, helping you turn your dream home into a reality with confidence and ease.",
     "Whether you're planning for the future or building a rainy day fund, saving with Lloyds helps you grow your money with confidence. With a range of accounts designed to suit your goals, competitive interest rates, and easy access when you need it, Lloyds makes saving simple, secure, and rewarding.",
-    "Ready for your next car? Lloyds makes financing straightforward with flexible options that put you in the driver’s seat. From low-interest rates to tailored repayment plans, we help you get on the road faster—without the stress. Explore financing that fits your lifestyle, budget, and journey ahead.",
+    "Ready for your next car? Lloyds makes financing straightforward with flexible options that put you in the driver's seat. From low-interest rates to tailored repayment plans, we help you get on the road faster—without the stress. Explore financing that fits your lifestyle, budget, and journey ahead.",
   ];
 
   return (
@@ -41,7 +41,7 @@ export default function Products() {
         />
         <StyledProduct
           src={carImage}
-          onClick={() => setSelectedProduct(ProductEnum.CarFinance)}
+          onClick={() => setSelectedProduct(ProductEnum.Mortgage)}
         />
       </StyledProductsContainer>
       <StyledProductContentContainer>
