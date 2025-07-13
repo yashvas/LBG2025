@@ -104,6 +104,7 @@ export const FormWrapper = styled.div`
   flex-direction: row;
   padding: 16px;
   align-items: center;
+  width: 80%;
 `;
 
 export const FormContainer = styled.form`
