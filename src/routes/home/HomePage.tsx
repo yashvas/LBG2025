@@ -9,6 +9,9 @@ import ProgressBar from "../../components/progressBar/ProgressBar";
 import StyledButtonComponent from "../../components/styledButton/StyledButton";
 import * as routes from "../manifest";
 import TextBox from "../../components/textBox/TextBox";
+import { HorizontalFlexBox } from "../../components/horizontalFlexBox/HorizontalFlexBox.styled";
+import { VerticalFlexBox } from "../../components/verticalFlexBox/VerticalFlexBox.styled";
+import PartitionedProgressBar from "../../components/partitionedProgressBar/PartitionedProgressBar";
 
 export default function HomePage() {
   return (
@@ -19,6 +22,17 @@ export default function HomePage() {
       <BigDropDown title={"Big drop down"} expandedHeight={2000}>
         <h1>This is how to use the big drop down</h1>
       </BigDropDown>
+      <VerticalFlexBox gap={160}>
+        <p>hola</p>
+        <h2>Muchacho</h2>
+        <h3>Brothers</h3>
+      </VerticalFlexBox>
+
+      <HorizontalFlexBox gap={160}>
+        <p>hola</p>
+        <h2>Muchacho</h2>
+        <h3>Brothers</h3>
+      </HorizontalFlexBox>
 
       <DropdownTextBox
         width={600}
@@ -38,6 +52,8 @@ export default function HomePage() {
         heading="This is a heading"
         text="Text box content here, skibidi or whatever"
       />
+
+      <PartitionedProgressBar progress={68} snappy />
     </Main>
   );
 }
