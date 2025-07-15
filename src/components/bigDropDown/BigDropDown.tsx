@@ -10,7 +10,6 @@ import { AiFillCaretDown } from "react-icons/ai";
 
 interface BigDropDownProps {
   title: string;
-  content: React.ReactNode;
   expandedHeight: number;
   children: React.ReactNode;
 }

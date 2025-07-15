@@ -28,13 +28,11 @@ export default function DropdownTextBox({
       isActive={isActive}
       width={width}
       expandedHeight={expandedHeight}
+      onClick={() => setIsActive((prev) => !prev)}
     >
       <StyledFlexBox>
         <StyledHeader>{heading}</StyledHeader>
-        <StyledRotateContainer
-          isActive={isActive}
-          onClick={() => setIsActive((prev) => !prev)}
-        >
+        <StyledRotateContainer isActive={isActive}>
           <AiFillCaretDown color="black" />
         </StyledRotateContainer>
       </StyledFlexBox>

@@ -7,6 +7,7 @@ export const StyledTextBox = styled.div<{
 }>`
   background-color: white;
   border-radius: 25px;
+  cursor: pointer;
   padding: 8px;
   overflow: hidden;
   max-height: ${({ isActive, expandedHeight }) =>
