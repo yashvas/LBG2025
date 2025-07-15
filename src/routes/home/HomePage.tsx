@@ -22,13 +22,13 @@ export default function HomePage() {
 
       <DropdownTextBox
         width={600}
-        heading={"Regular drop down"}
-        text={"click to find out more"}
+        heading={"Insurance"}
+        text={"Life insurance"}
       />
 
       <GoalField label="Label" />
 
-      <ProgressBar progress={40} />
+      <ProgressBar progress={60} />
 
       <StyledButtonComponent to={routes.Careers}>
         Button Text here!!
