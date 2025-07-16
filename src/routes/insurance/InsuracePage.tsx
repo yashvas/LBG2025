@@ -1,6 +1,8 @@
+import { Main } from "../../components/styled/Main.styled";
+
 export default function InsurancePage() {
     return (
-        <div>
+        <Main>
             <h1>Insurance Page</h1>
             <p>Welcome to the insurance page. Here you can:</p>
             <ul>
@@ -9,6 +11,13 @@ export default function InsurancePage() {
                 <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Contact support</a></li>
             </ul>
             <p>Thank you for choosing our insurance services!</p>
-        </div>
+            <p>We have 4 different types of insurance available</p>
+            <ul>
+                <li>home insurance</li>
+                <li>home insurance</li>
+                <li>pet insurance</li>
+                <li>car insurance</li>
+            </ul>
+        </Main>
     );
-}   
+}    
