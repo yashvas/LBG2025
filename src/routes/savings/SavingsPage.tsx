@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
+import ToDoList from "../../components/toDoList/ToDoList";
 
 export default function SavingsPage() {
-    const [currentSavings, setCurrentSavings] = React.useState('');
-    const [savingsGoal, setSavingsGoal] = React.useState('');
-    const [interestRate, setInterestRate] = React.useState('');
+  const [currentSavings, setCurrentSavings] = React.useState("");
+  const [savingsGoal, setSavingsGoal] = React.useState("");
+  const [interestRate, setInterestRate] = React.useState("");
+  const [objectives, setObjectives] = React.useState<string[]>([]);
 
-    // Removed duplicate handleSubmit
+  // Removed duplicate handleSubmit
 
-    const [monthsNeeded, setMonthsNeeded] = React.useState<number | null>(null);
+  const [monthsNeeded, setMonthsNeeded] = React.useState<number | null>(null);
 
     function calculateMonthsToGoal(
         current: number,
