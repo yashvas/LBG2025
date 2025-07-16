@@ -21,11 +21,6 @@ export default function SavingsPage() {
         />
         <button type="submit">Calculate</button>
         </div>
-<<<<<<< HEAD
     );
     }
-    
-=======
-    )
-    }
->>>>>>> 4a7e14cace7f954d4c45de0393d3cbdc6221c637
+
