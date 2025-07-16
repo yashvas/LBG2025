@@ -13,7 +13,7 @@ export const AppHeader = styled.h1`
 export const ToDoListContainer = styled.div`
   width: 400px;
   height: 460px;
-  margin: 50px auto;
+  margin: 5px auto;
   padding: 20px;
   background-color: #1a1a1a;
   border-radius: 15px;

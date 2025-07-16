@@ -47,8 +47,8 @@ export const StyledFlexContainer = styled.div`
   flex-direction: row;
   align-items: center;
   background-color: #343a40;
-  padding: 8px;
+  padding: 5px;
   border-radius: 10px;
-  gap: 8px;
-  width: 300px;
+  gap: 3px;
+  width: 325px;
 `;
