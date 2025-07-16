@@ -13,7 +13,7 @@ export default function InsurancePage() {
             <p>Thank you for choosing our insurance services!</p>
             <p>We have 4 different types of insurance available</p>
             <ul>
-                <li>home insurance</li>
+                <li>life insurance</li>
                 <li>home insurance</li>
                 <li>pet insurance</li>
                 <li>car insurance</li>
