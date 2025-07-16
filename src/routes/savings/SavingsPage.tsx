@@ -106,10 +106,10 @@ export default function SavingsPage() {
                 Time to reach your savings goal: <strong>{monthsNeeded}</strong> months
             </p>
         </div>
+        
     )}    
-    <div><p></p></div>
         </div>
-            </HorizontalFlexBox>
+        </HorizontalFlexBox>
         </div>
     );
 }
