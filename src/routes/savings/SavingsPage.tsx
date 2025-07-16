@@ -1,5 +1,6 @@
 import React from "react";
 import ToDoList from "../../components/toDoList/ToDoList";
+import { HorizontalFlexBox } from "../../components/horizontalFlexBox/HorizontalFlexBox.styled";
 
 export default function SavingsPage() {
   const [currentSavings, setCurrentSavings] = React.useState("");
@@ -53,11 +54,16 @@ export default function SavingsPage() {
     return (
         <div>
             <h1>Savings Page</h1>
+            
+            <p>Welcome to the savings page. Here you can manage your savings accounts.</p>
+            <HorizontalFlexBox>
+            <div>
             <ToDoList
                 objectives={objectives}
                 setObjectives={setObjectives}
             />
-            <p>Welcome to the savings page. Here you can manage your savings accounts.</p>
+            </div>
+            <div>
             <h2>Savings Tracker</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="current-savings">Current Savings: </label>
@@ -101,6 +107,9 @@ export default function SavingsPage() {
             </p>
         </div>
     )}    
+    <div><p></p></div>
+        </div>
+            </HorizontalFlexBox>
         </div>
     );
 }
