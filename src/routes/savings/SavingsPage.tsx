@@ -53,6 +53,10 @@ export default function SavingsPage() {
     return (
         <div>
             <h1>Savings Page</h1>
+            <ToDoList
+                objectives={objectives}
+                setObjectives={setObjectives}
+            />
             <p>Welcome to the savings page. Here you can manage your savings accounts.</p>
             <h2>Savings Tracker</h2>
             <form onSubmit={handleSubmit}>
