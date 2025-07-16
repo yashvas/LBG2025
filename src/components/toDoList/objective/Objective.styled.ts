@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CircularSelectBox = styled.input.attrs({ type: "checkbox" })`
   width: 20px;
   height: 20px;
-  border: 2px solid #007bff;
+  border: 2px solid #11b67a;
   border-radius: 50%;
   appearance: none;
   cursor: pointer;
@@ -11,16 +11,16 @@ export const CircularSelectBox = styled.input.attrs({ type: "checkbox" })`
   transition: all 0.3s ease;
 
   &:checked {
-    background-color: #007bff;
-    border-color: #0056b3;
+    background-color: #11b67a;
+    border-color: #11b67a;
   }
 
   &:hover {
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 5px rgba(17, 182, 122, 0.5);
   }
 
   &:focus {
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+    box-shadow: 0 0 5px rgba(17, 182, 122, 0.8);
   }
 `;
 
@@ -33,7 +33,7 @@ export const ToDoText = styled.span`
   transition: color 0.3s ease;
 
   &:hover {
-    color: #007bff;
+    color: #11b67a;
   }
 
   &.completed {

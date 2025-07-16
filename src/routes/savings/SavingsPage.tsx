@@ -1,19 +1,21 @@
-import React, { constructor } from "react";
+import React from "react";
 import ToDoList from "../../components/toDoList/ToDoList";
 import { HorizontalFlexBox } from "../../components/horizontalFlexBox/HorizontalFlexBox.styled";
+import ProgressBar from "../../components/progressBar/ProgressBar";
 
 export default function SavingsPage() {
   const [currentSavings, setCurrentSavings] = React.useState("");
+  const [monthlyContribution, setMonthlyContribution] = React.useState("");
   const [savingsGoal, setSavingsGoal] = React.useState("");
   const [interestRate, setInterestRate] = React.useState("");
   const [objectives, setObjectives] = React.useState<string[]>([]);
-
-  // Removed duplicate handleSubmit
+  
 
   const [monthsNeeded, setMonthsNeeded] = React.useState<number | null>(null);
 
     function calculateMonthsToGoal(
         current: number,
+        monthlyContribution: number,
         goal: number,
         rate: number,
     ): number | null {
@@ -23,23 +25,31 @@ export default function SavingsPage() {
         let months = 0;
         let savings = current;
         while (savings < goal && months < 1000) { // Prevent infinite loop
-            savings += savings * (rate / 100)/12;
+            savings += (savings * (rate / 100)/12) + monthlyContribution;
             months++;
         }
         return savings >= goal ? months : null;
     }
 
+    function calcProg(current: number, goal: number): number {
+        if (goal <= 0) return 0;
+        return (current / goal) * 100;
+    }
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         const current = parseFloat(currentSavings);
-        const goal = parseFloat(savingsGoal);
-        const rate = parseFloat(interestRate);
+        const monthlyContributionValue = parseFloat(monthlyContribution);
+        const goalValue = parseFloat(savingsGoal);
+        const rateValue = parseFloat(interestRate);
 
         if (
             isNaN(current) ||
-            isNaN(goal) ||
-            isNaN(rate) ||
+            isNaN(monthlyContributionValue) ||
+            isNaN(goalValue) ||
+            isNaN(rateValue) ||
             currentSavings === '' ||
+            monthlyContribution === '' ||
             savingsGoal === '' ||
             interestRate === ''
         ) {
@@ -47,8 +57,10 @@ export default function SavingsPage() {
             return;
         }
 
-        const months = calculateMonthsToGoal(current, goal, rate);
+        const months = calculateMonthsToGoal(current, monthlyContributionValue, goalValue, rateValue);
         setMonthsNeeded(months);
+
+        // const progressPercentage = calcProg(current, goalValue);
     };
 
     return (
@@ -58,9 +70,7 @@ export default function SavingsPage() {
             <p>Welcome to the savings page. Here you can manage your savings accounts.</p>
             <HorizontalFlexBox gap={80}>
                 <div>
-                    constructor(parameters) {  
-                    }
-                
+                    <h2>To-Do List</h2>
                     <ToDoList
                         objectives={objectives}
                         setObjectives={setObjectives}
@@ -69,8 +79,9 @@ export default function SavingsPage() {
 
                 <div>
                 <h2>Savings Tracker</h2>
+                <br></br>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="current-savings">Current Savings: </label>
+                    <label htmlFor="current-savings">Current Savings:</label>
                     <input
                         type="number"
                         id="current-savings"
@@ -80,7 +91,17 @@ export default function SavingsPage() {
                         onChange={e => setCurrentSavings(e.target.value)}
                     />
                     <p></p>
-                    <label htmlFor="savings-goal">Savings Goal: </label>
+                    <label htmlFor="monthly-contribution">Monthly Contribution:</label>
+                    <input
+                        type="number"
+                        id="monthly-contribution"
+                        name="monthlyContribution"
+                        placeholder="Enter your monthly contribution"
+                        value={monthlyContribution}
+                        onChange={e => setMonthlyContribution(e.target.value)}
+                    />
+                    <p></p>
+                    <label htmlFor="savings-goal">Savings Goal:</label>
                         <input
                             type="number"
                             id="savings-goal"
@@ -90,7 +111,7 @@ export default function SavingsPage() {
                             onChange={e => setSavingsGoal(e.target.value)}
                         />
                     <p></p>
-                    <label htmlFor="interest-rate">Interest Rate: </label>
+                    <label htmlFor="interest-rate">Interest Rate:</label>
                         <input
                             type="number"
                             id="interest-rate"
@@ -103,14 +124,21 @@ export default function SavingsPage() {
                         <button type="submit">Calculate</button>
                     </p>
                 </form>
-        {monthsNeeded !== null && (
+        {monthsNeeded !== null && (() => {
+            const progressPercentage = calcProg(
+                parseFloat(currentSavings),
+                parseFloat(savingsGoal)
+            );
+            return (
                 <div>
                     <h2>Calculation Result</h2>
                     <p>
                         Time to reach your savings goal: <strong>{monthsNeeded}</strong> months
                     </p>
+                    <ProgressBar progress={progressPercentage}/>
                 </div>
-            )}    
+            );
+        })()}    
             </div>
         </HorizontalFlexBox>
         </div>

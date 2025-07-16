@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 export const AppHeader = styled.h1`
-  font-size: 24px;
+  font-size: 14px;
   font-weight: bold;
-  color: #007bff;
+  color: #11b67a;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 `;
 
 export const ToDoListContainer = styled.div`
   width: 400px;
-  height: 600px;
+  height: 460px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #1a1a1a;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
