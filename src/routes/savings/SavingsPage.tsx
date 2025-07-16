@@ -1,3 +1,6 @@
 export default function SavingsPage () {
-    return <h1>hello world</h1>;
-}
+    
+    return 
+    <h2>Savings</h2>;
+        
+        }
