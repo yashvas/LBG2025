@@ -12,15 +12,18 @@ export default function SavingsPage() {
     function calculateMonthsToGoal(
         current: number,
         goal: number,
-        rate: number
+        rate: number,
     ): number | null {
-        if (rate <= 0 || current >= goal) return null;
-        // Monthly compound interest formula:
-        // FV = PV * (1 + r)^n
-        // n = log(FV/PV) / log(1 + r)
-        const monthlyRate = rate / 100 / 12;
-        const n = Math.log(goal / current) / Math.log(1 + monthlyRate);
-        return n > 0 ? Math.ceil(n) : null;
+        if (rate <= 0 || current <= 0 || goal <= current) {
+            return null; // Invalid input or goal already reached
+        }
+        let months = 0;
+        let savings = current;
+        while (savings < goal && months < 1000) { // Prevent infinite loop
+            savings += savings * (rate / 100)/12;
+            months++;
+        }
+        return savings >= goal ? months : null;
     }
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -28,6 +31,19 @@ export default function SavingsPage() {
         const current = parseFloat(currentSavings);
         const goal = parseFloat(savingsGoal);
         const rate = parseFloat(interestRate);
+
+        if (
+            isNaN(current) ||
+            isNaN(goal) ||
+            isNaN(rate) ||
+            currentSavings === '' ||
+            savingsGoal === '' ||
+            interestRate === ''
+        ) {
+            setMonthsNeeded(null);
+            return;
+        }
+
         const months = calculateMonthsToGoal(current, goal, rate);
         setMonthsNeeded(months);
     };
@@ -67,18 +83,18 @@ export default function SavingsPage() {
                     value={interestRate}
                     onChange={e => setInterestRate(e.target.value)}
                 />
-                <p></p>
-                <button type="submit">Calculate</button>
-                <p></p>
+                <p>
+                    <button type="submit">Calculate</button>
+                </p>
             </form>
-            {monthsNeeded !== null && (
-                <>
-                    <p>
-                        Time to reach your savings goal: <strong>{monthsNeeded}</strong> months
-                    </p>
-                </>
-            )}
+    {monthsNeeded !== null && (
+        <div>
+            <h2>Calculation Result</h2>
+            <p>
+                Time to reach your savings goal: <strong>{monthsNeeded}</strong> months
+            </p>
         </div>
-    )
-    }
-
+    )}    
+        </div>
+    );
+}
