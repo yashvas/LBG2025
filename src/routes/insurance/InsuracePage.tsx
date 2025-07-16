@@ -8,7 +8,10 @@ export default function InsurancePage() {
             <ul>
                 <li>Check policy details</li>
                 <li>File a claim</li>
-                <li>see details on different insurance types (home, life, pet, and car)</li>
+                <li>life</li>
+                <li>home</li>
+                <li>pet</li>
+                <li>car</li>
 
                 <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Contact support</a></li>
             </ul>
@@ -17,7 +20,6 @@ export default function InsurancePage() {
             <ul>
                 <h1>life insurance</h1>
             <h3>Good to know</h3>
-            colour:#008000
 <p>You can select the amount and length of your policy.
 You can cancel at any time, free of charge.
 You need to be a UK resident aged 18 to 59 to be eligible to apply online.
