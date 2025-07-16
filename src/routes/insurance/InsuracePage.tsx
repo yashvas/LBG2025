@@ -18,7 +18,7 @@ export default function InsurancePage() {
             <p>Thank you for choosing our insurance services!</p>
             <p>We have 4 different types of insurance available</p>
             <ul>
-                <h1>life insurance</h1>
+                <h1 style={{color: "#11b67a"}}>life insurance</h1>
             <h3>Good to know</h3>
 <p>You can select the amount and length of your policy.
 You can cancel at any time, free of charge.
@@ -33,7 +33,7 @@ You must continue to make your monthly payments to keep your policy active.</p>
 <p>You don’t need a medical examination, and you’ll get an instant decision.
 Scottish Widows paid out 98% of claims in 2023*. 
 It’s quick and simple to do it online or on our app and you could be covered in minutes.</p>
-                <h1>home insurance</h1>
+                <h1 style={{color: "#11b67a"}}>home insurance</h1>
 <h3>Here when you need us most</h3>
 <p>Make claims easily online or by phone. 
 Our out of hours emergency claims helpline is available for urgent support.</p>
@@ -48,7 +48,7 @@ A higher excess could mean you’ll pay less for your cover.</p>
 <h3>Manage your policy online</h3>
 <p>It’s easy to manage your policy online; claim, renew and pay. 
 Log on to the app or Internet Banking if you’re registered, to make managing your policy even easier.</p>
-                <h1>pet insurance</h1>
+                <h1 style={{color: "#11b67a"}}>pet insurance</h1>
 
 <h2>Cover for your furry companion</h2>
 <p>Pets are for life, and so is our insurance.
@@ -61,7 +61,7 @@ Log on to the app or Internet Banking if you’re registered, to make managing y
 <h3>Cats</h3>
 <p>For curious cats or lazy loungers - our cover can help keep your furry friend safe and happy.</p>
                
-                <h1>car insurance</h1>
+                <h1 style={{color: "#11b67a"}}>car insurance</h1>
                 <h3>Cover that's clear</h3>
 <p>Choose from two levels of cover (Gold and Silver) both fully comprehensive.
 And add extras as needed. Simple.</p>
