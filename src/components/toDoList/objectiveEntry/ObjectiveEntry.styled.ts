@@ -55,5 +55,5 @@ export const StyledFlexContainer = styled.div`
   padding: 8px;
   border-radius: 10px;
   gap: 8px;
-  width: 335px;
+  width: 370px;
 `;

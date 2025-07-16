@@ -15,13 +15,18 @@ const ObjectiveEntry = ({ setObjectives }: ObjectiveEntryProps) => {
 
   const handleAddObjective = () => {
     if (inputValue.trim() !== "") {
-      setObjectives((prev) => [...prev, inputValue]);
+      setObjectives((prev: any) => [...prev, inputValue]);
       setInputValue("");
     }
   };
 
+  const handleClearObjectives = () => {
+    setObjectives([]);
+  };
+
   return (
     <StyledFlexContainer>
+      <AddButton onClick={handleClearObjectives}>Clear</AddButton>
       <TextBoxEntry
         placeholder="Enter your objective..."
         value={inputValue}
