@@ -1,6 +1,5 @@
 export default function AboutUsPage () {
     
-    return 
-    <h1>About us</h1>;
+    return <h1>About us</h1>;
         
         }
