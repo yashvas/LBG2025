@@ -68,7 +68,8 @@ And add extras as needed. Simple.</p>
 
                 <h3>Damage from uninsured drivers, dealt with</h3>
 <p>If it’s their fault and you get their details, it won’t impact your no claims discount 
-- and there’s no excess either. Terms and conditions apply.</p>
+- and there’s no excess either. Terms and conditions apply.<br /><br /><br />
+</p>
 
             </ul>
         </Main>
