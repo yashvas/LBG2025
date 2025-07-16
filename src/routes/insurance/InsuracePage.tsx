@@ -8,10 +8,7 @@ export default function InsurancePage() {
             <ul>
                 <li>Check policy details</li>
                 <li>File a claim</li>
-                <li>life</li>
-                <li>home</li>
-                <li>pet</li>
-                <li>car</li>
+                <li>View info on different insuarance types</li>
 
                 <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Contact support</a></li>
             </ul>
