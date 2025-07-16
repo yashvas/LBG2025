@@ -57,58 +57,58 @@ export default function SavingsPage() {
             
             <p>Welcome to the savings page. Here you can manage your savings accounts.</p>
             <HorizontalFlexBox>
-            <div>
-            <ToDoList
-                objectives={objectives}
-                setObjectives={setObjectives}
-            />
+                <div>
+                    <ToDoList
+                        objectives={objectives}
+                        setObjectives={setObjectives}
+                    />
+                </div>
+
+                <div>
+                <h2>Savings Tracker</h2>
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="current-savings">Current Savings: </label>
+                    <input
+                        type="number"
+                        id="current-savings"
+                        name="currentSavings"
+                        placeholder="Enter your current savings"
+                        value={currentSavings}
+                        onChange={e => setCurrentSavings(e.target.value)}
+                    />
+                    <p></p>
+                    <label htmlFor="savings-goal">Savings Goal: </label>
+                        <input
+                            type="number"
+                            id="savings-goal"
+                            name="savingsGoal"
+                            placeholder="Enter your savings goal"
+                            value={savingsGoal}
+                            onChange={e => setSavingsGoal(e.target.value)}
+                        />
+                    <p></p>
+                    <label htmlFor="interest-rate">Interest Rate: </label>
+                        <input
+                            type="number"
+                            id="interest-rate"
+                            name="interestRate"
+                            placeholder="Enter the interest rate (%)"
+                            value={interestRate}
+                            onChange={e => setInterestRate(e.target.value)}
+                        />
+                    <p>
+                        <button type="submit">Calculate</button>
+                    </p>
+                </form>
+        {monthsNeeded !== null && (
+                <div>
+                    <h2>Calculation Result</h2>
+                    <p>
+                        Time to reach your savings goal: <strong>{monthsNeeded}</strong> months
+                    </p>
+                </div>
+            )}    
             </div>
-            <div>
-            <h2>Savings Tracker</h2>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="current-savings">Current Savings: </label>
-                <input
-                    type="number"
-                    id="current-savings"
-                    name="currentSavings"
-                    placeholder="Enter your current savings"
-                    value={currentSavings}
-                    onChange={e => setCurrentSavings(e.target.value)}
-                />
-                <p></p>
-                <label htmlFor="savings-goal">Savings Goal: </label>
-                <input
-                    type="number"
-                    id="savings-goal"
-                    name="savingsGoal"
-                    placeholder="Enter your savings goal"
-                    value={savingsGoal}
-                    onChange={e => setSavingsGoal(e.target.value)}
-                />
-                <p></p>
-                <label htmlFor="interest-rate">Interest Rate: </label>
-                <input
-                    type="number"
-                    id="interest-rate"
-                    name="interestRate"
-                    placeholder="Enter the interest rate (%)"
-                    value={interestRate}
-                    onChange={e => setInterestRate(e.target.value)}
-                />
-                <p>
-                    <button type="submit">Calculate</button>
-                </p>
-            </form>
-    {monthsNeeded !== null && (
-        <div>
-            <h2>Calculation Result</h2>
-            <p>
-                Time to reach your savings goal: <strong>{monthsNeeded}</strong> months
-            </p>
-        </div>
-        
-    )}    
-        </div>
         </HorizontalFlexBox>
         </div>
     );
