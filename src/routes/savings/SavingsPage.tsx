@@ -76,7 +76,6 @@ export default function SavingsPage() {
                     <p>
                         Time to reach your savings goal: <strong>{monthsNeeded}</strong> months
                     </p>
-                    <p>{monthsNeeded}</p>
                 </>
             )}
         </div>
