@@ -18,8 +18,9 @@ export default function InsurancePage() {
             <p>Thank you for choosing our insurance services!</p>
             <p>We have 4 different types of insurance available</p>
             <ul>
-                <li>life insurance</li>
+                <h1>life insurance</h1>
             <h3>Good to know</h3>
+            colour:#008000
 <p>You can select the amount and length of your policy.
 You can cancel at any time, free of charge.
 You need to be a UK resident aged 18 to 59 to be eligible to apply online.
@@ -33,7 +34,7 @@ You must continue to make your monthly payments to keep your policy active.</p>
 <p>You don’t need a medical examination, and you’ll get an instant decision.
 Scottish Widows paid out 98% of claims in 2023*. 
 It’s quick and simple to do it online or on our app and you could be covered in minutes.</p>
-                <li>home insurance</li>
+                <h1>home insurance</h1>
 <h3>Here when you need us most</h3>
 <p>Make claims easily online or by phone. 
 Our out of hours emergency claims helpline is available for urgent support.</p>
@@ -48,9 +49,30 @@ A higher excess could mean you’ll pay less for your cover.</p>
 <h3>Manage your policy online</h3>
 <p>It’s easy to manage your policy online; claim, renew and pay. 
 Log on to the app or Internet Banking if you’re registered, to make managing your policy even easier.</p>
-                <li>pet insurance</li>
+                <h1>pet insurance</h1>
 
-                <li>car insurance</li>
+<h2>Cover for your furry companion</h2>
+<p>Pets are for life, and so is our insurance.
+ As long as you stay with us, if your pet is diagnosed with a condition we cover after your policy starts, 
+ we’ll be there to support you. Year in, year out, up to your annual limits.</p>
+
+<h3>Dogs</h3>
+<p>Designed to keep your dog happy and healthy, you can rest assured they're covered from head to tail.</p>
+
+<h3>Cats</h3>
+<p>For curious cats or lazy loungers - our cover can help keep your furry friend safe and happy.</p>
+               
+                <h1>car insurance</h1>
+                <h3>Cover that's clear</h3>
+<p>Choose from two levels of cover (Gold and Silver) both fully comprehensive.
+And add extras as needed. Simple.</p>
+
+                <h3>Take care of things online</h3>
+<p>Make claims, change details and check policy info easily online.</p>
+
+                <h3>Damage from uninsured drivers, dealt with</h3>
+<p>If it’s their fault and you get their details, it won’t impact your no claims discount 
+- and there’s no excess either. Terms and conditions apply.</p>
 
             </ul>
         </Main>
