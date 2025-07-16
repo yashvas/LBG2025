@@ -1,4 +1,4 @@
-import React from "react";
+import React, { constructor } from "react";
 import ToDoList from "../../components/toDoList/ToDoList";
 import { HorizontalFlexBox } from "../../components/horizontalFlexBox/HorizontalFlexBox.styled";
 
@@ -57,7 +57,11 @@ export default function SavingsPage() {
             
             <p>Welcome to the savings page. Here you can manage your savings accounts.</p>
             <HorizontalFlexBox>
-                <div>
+                <div> {
+                    constructor(parameters) {
+                        
+                    }
+                }
                     <ToDoList
                         objectives={objectives}
                         setObjectives={setObjectives}
