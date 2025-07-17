@@ -56,11 +56,11 @@ const SavingsPage: React.FC = () => {
         <span style={{ fontSize: "1.2rem", marginTop: "0.5rem" }}>£{amount} saved</span>
       </div>
       <div style={{ marginTop: "2rem", maxWidth: 400, textAlign: "left", background: "#f9f9f9", padding: "1rem", borderRadius: "12px", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
-        <h3>How to use:</h3>
+        <h3 style={{color: "black"}}>How to use:</h3>
         <ol>
-          <li>Type the amount of money you have saved in the box above.</li>
-          <li>See your horse level and picture appear inside the green circle.</li>
-          <li>Try saving more to reach the next horse level!</li>
+          <li style={{color: "black"}}>Type the amount of money you have saved in the box above.</li>
+          <li style={{color: "black"}}>See your horse level and picture appear inside the green circle.</li>
+          <li style={{color: "black"}}>Try saving more to reach the next horse level!</li>
         </ol>
       </div>
                  <div className="circle"></div> {/* This is the circle */}

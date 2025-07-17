@@ -14,10 +14,10 @@ export const ProgressFill = styled.div`
   width: 100%;
   background: linear-gradient(
     to right,
-    red 0%,
-    orange 25%,
-    yellow 50%,
-    lime 75%,
+    green 0%,
+    green 25%,
+    green 50%,
+    green 75%,
     green 100%
   );
   position: absolute;
