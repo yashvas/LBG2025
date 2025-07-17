@@ -19,7 +19,7 @@ export default function SavingsPage() {
         goal: number,
         rate: number,
     ): number | null {
-        if (rate <= 0 || current <= 0 || goal <= current) {
+        if ((rate <= 0 && monthlyContribution <= 0) || current <= 0 || goal <= current) {
             return null; // Invalid input or goal already reached
         }
         let months = 0;
