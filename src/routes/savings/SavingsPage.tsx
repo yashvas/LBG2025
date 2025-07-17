@@ -52,8 +52,8 @@ const SavingsPage: React.FC = () => {
         color: "#fff"
       }}>
         <img src={horse.img} alt={horse.label} style={{ width: "200px", height: "200px", objectFit: "contain" }} />
-        <span style={{ fontSize: "2rem", marginTop: "1rem" }}>{horse.label}</span>
-        <span style={{ fontSize: "1.2rem", marginTop: "0.5rem" }}>£{amount} saved</span>
+        <span style={{ fontSize: "2rem" }}>{horse.label}</span>
+        <span style={{ fontSize: "1.2rem", marginBottom: "0.5rem" }}>£{amount} saved</span>
       </div>
       <div style={{ marginTop: "2rem", maxWidth: 400, textAlign: "left", background: "#f9f9f9", padding: "1rem", borderRadius: "12px", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
         <h3 style={{color: "black"}}>How to use:</h3>
