@@ -15,25 +15,22 @@ const AppLayout = styled.div`
   flex-direction: column;
 `;
 
-function App() {
+
+const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <AppLayout>
+    <AppLayout>
+      <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path={routes.Home} element={<HomePage />} />
-          <Route
-            path={routes.Sustainability}
-            element={<SustainabilityPage />}
-          />
+          <Route path={routes.Sustainability} element={<SustainabilityPage />} />
           <Route path={routes.Careers} element={<CareersPage />} />
           <Route path={routes.Savings} element={<SavingsPage />} />
           <Route path={routes.AboutUs} element={<AboutUsPage />} />
         </Routes>
         <Footer />
-      </AppLayout>
-    </BrowserRouter>
+      </BrowserRouter>
+    </AppLayout>
   );
-}
-
+};
 export default App;
