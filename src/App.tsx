@@ -6,6 +6,8 @@ import Footer from "./components/footer/Footer";
 import SustainabilityPage from "./routes/sustainability/SustainabilityPage";
 import styled from "styled-components";
 import CareersPage from "./routes/careers/CareersPage";
+import SavingsPage from "./routes/savings/SavingsPage";
+import InsurancePage from "./routes/insurance/InsuracePage";
 
 const AppLayout = styled.div`
   min-height: 100vh;
@@ -25,6 +27,8 @@ function App() {
             element={<SustainabilityPage />}
           />
           <Route path={routes.Careers} element={<CareersPage />} />
+          <Route path={routes.Savings} element={<SavingsPage />} />
+          <Route path={routes.Insurance} element={<InsurancePage />} />
         </Routes>
         <Footer />
       </AppLayout>
