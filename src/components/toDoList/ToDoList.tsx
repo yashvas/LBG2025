@@ -1,6 +1,6 @@
 import Objective from "./objective/Objective";
 import ObjectiveEntry from "./objectiveEntry/ObjectiveEntry";
-import { AppHeader, ToDoListContainer } from "./ToDoList.styled";
+import {ToDoListContainer } from "./ToDoList.styled";
 
 interface ToDoListProps {
   objectives: string[];
@@ -11,7 +11,6 @@ interface ToDoListProps {
 export default function ToDoList({ objectives, setObjectives }: ToDoListProps) {
   return (
     <ToDoListContainer>
-      <AppHeader>To-Do List</AppHeader>
       <ObjectiveEntry setObjectives={setObjectives} />
       {objectives.map((item) => (
         <Objective title={item} />

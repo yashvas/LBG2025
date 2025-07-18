@@ -5,11 +5,13 @@ export const StyledFooterContainer = styled.footer`
   flex-direction: row;
   justify-content: space-between;
   background-color: #11b67a;
-  padding: 24px 60px;
+  padding: 20px 60px;
   width: 100%;
   height: 2vh;
   flex-wrap: wrap;
   align-items: center;
+  position: fixed;
+  bottom: 0;
 `;
 
 export const StyledFooterItemsContainer = styled.div`
