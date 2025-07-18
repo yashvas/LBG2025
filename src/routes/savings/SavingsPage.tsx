@@ -19,12 +19,12 @@ export default function SavingsPage() {
         goal: number,
         rate: number,
     ): number | null {
-        if (rate <= 0 || current <= 0 || goal <= current) {
+        if (rate <= 0 && current <= 0 || goal <= current) {
             return null; // Invalid input or goal already reached
         }
         let months = 0;
         let savings = current;
-        while (savings < goal && months < 1000) { // Prevent infinite loop
+        while (savings < goal && months < 1000000) { // Prevent infinite loop
             savings += (savings * (rate / 100)/12) + monthlyContribution;
             months++;
         }
@@ -132,9 +132,10 @@ export default function SavingsPage() {
             return (
                 <div>
                     <h2>Calculation Result</h2>
-                    <p>
-                        Time to reach your savings goal: <strong>{monthsNeeded}</strong> months
+                    <p id="result">
+                        Time to reach your savings goal: <strong>{monthsNeeded}</strong> months 
                     </p>
+                    <p></p>
                     <ProgressBar progress={progressPercentage}/>
                 </div>
             );
