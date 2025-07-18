@@ -13,11 +13,17 @@ const getHorseLevel = (amount: number) => {
   return { img: adultHorse, label: "Adult Horse" };
 };
 
+const maxSavings = 5000;
+
 const SavingsPage: React.FC = () => {
   const [amount, setAmount] = useState<number>(0);
   const horse = getHorseLevel(amount);
 
         const [progress, setProgress] = useState(0);
+
+        useEffect(() => {
+          setProgress((amount / maxSavings) * 100);
+        }, [amount])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,7 +39,10 @@ const SavingsPage: React.FC = () => {
 
 
   return (
-    <div className="page-container">
+    <div className="page-container" style={{paddingTop: 200}}>
+      <div style={{width: 200, height: 200}}>
+        <ProgressBar  progress={progress} />
+      </div>
       <h2>Enter your savings amount:</h2>
       <input
         type="number"
@@ -65,9 +74,11 @@ const SavingsPage: React.FC = () => {
       </div>
                  <div className="circle"></div> {/* This is the circle */}
                 <div style={{ textAlign: "center", padding: "2rem" }}>
-      <h1>Curved Progress Bar</h1>
-      <ProgressBar progress={progress} />
     </div>
+          <h1>Curved Progress Bar</h1>
+      <div className="progress-container">
+      
+      </div>
     </div>
   );
 };

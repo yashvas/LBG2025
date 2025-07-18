@@ -8,6 +8,9 @@ import styled from "styled-components";
 import CareersPage from "./routes/careers/CareersPage";
 import SavingsPage from "./routes/savings/SavingsPage";
 import AboutUsPage from "./routes/About us/AboutUsPage";
+import { useState, useEffect } from "react";
+import ProgressBar from "./components/progressBar/ProgressBar";
+
 
 const AppLayout = styled.div`
   min-height: 100vh;

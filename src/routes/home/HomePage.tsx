@@ -19,41 +19,6 @@ export default function HomePage() {
       <Hero />
       <Products />
       <CustomerReviews />
-      <BigDropDown title={"Big drop down"} expandedHeight={2000}>
-        <h1>This is how to use the big drop down</h1>
-      </BigDropDown>
-      <VerticalFlexBox gap={160}>
-        <p>hola</p>
-        <h2>Muchacho</h2>
-        <h3>Brothers</h3>
-      </VerticalFlexBox>
-
-      <HorizontalFlexBox gap={160}>
-        <p>hola</p>
-        <h2>Muchacho</h2>
-        <h3>Brothers</h3>
-      </HorizontalFlexBox>
-
-      <DropdownTextBox
-        width={600}
-        heading={"Insurance"}
-        text={"Life insurance"}
-      />
-
-      <GoalField label="Label" />
-
-      <ProgressBar progress={60} />
-
-      <StyledButtonComponent to={routes.Careers}>
-        Button Text here!!
-      </StyledButtonComponent>
-
-      <TextBox
-        heading="This is a heading"
-        text="Text box content here, skibidi or whatever"
-      />
-
-      <PartitionedProgressBar progress={68} snappy />
     </Main>
   );
 }

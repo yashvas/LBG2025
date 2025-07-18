@@ -6,6 +6,12 @@
     height: 115vh; /* Full viewport height */
 }
 
+.progress-container {
+  position: absolute;
+  top: 20px;       /* distance from top */
+  left: 20px;      /* distance from left */
+  width: 300px;
+}
 
 
 
