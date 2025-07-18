@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledProgressDiv = styled.div`
   width: 100%;
-  height: 15px;
+  height: 20px;
   background-color: #e0e0e0;
   border-radius: 10px;
   overflow: hidden;
@@ -12,7 +12,14 @@ export const StyledProgressDiv = styled.div`
 export const ProgressFill = styled.div`
   height: 100%;
   width: 100%;
-  background: #11b67a;
+  background: linear-gradient(
+    to right,
+    red 0%,
+    orange 25%,
+    yellow 50%,
+    lime 75%,
+    green 100%
+  );
   position: absolute;
   top: 0;
   left: 0;
