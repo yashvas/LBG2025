@@ -1,4 +1,5 @@
 import React from "react";
+import Awards from "./Awards";
 
 const AboutUsPage: React.FC = () => (
   <div style={{ padding: "2rem", maxWidth: 800, margin: "0 auto", color: "#fff" }}>
@@ -17,7 +18,6 @@ const AboutUsPage: React.FC = () => (
       <h2>🐎 Expansion and Symbolism (1866–1945)</h2>
       <ul>
         <li><strong>1884:</strong> Acquired Barnetts, Hoares & Co., inheriting the iconic black horse symbol.</li>
-        <li><strong>1912:</strong> Moved headquarters to Lombard Street, London.</li>
         <li><strong>1914–1918:</strong> Employed thousands of women during WWI; over 6,000 staff served in the war.</li>
         <li><strong>1928:</strong> Introduced mechanized accounting, revolutionizing banking operations.</li>
         <li><strong>1941:</strong> Staff funded a Spitfire named “The Black Horse” for WWII efforts.</li>
@@ -37,7 +37,6 @@ const AboutUsPage: React.FC = () => (
     <section style={{ marginBottom: "2rem" }}>
       <h2>🔗 Mergers and Digital Leap (1995–2009)</h2>
       <ul>
-        <li><strong>1995:</strong> Merged with TSB, forming Lloyds TSB.</li>
         <li><strong>1998:</strong> Launched Lloyds On-Line, the first major UK bank internet service.</li>
         <li><strong>2000:</strong> Acquired Scottish Widows, expanding into life assurance and investments.</li>
         <li><strong>2009:</strong> Took over HBOS plc, forming Lloyds Banking Group, the UK’s largest retail bank.</li>
@@ -52,7 +51,9 @@ const AboutUsPage: React.FC = () => (
         <li>Continues to lead in digital banking, sustainability, and financial inclusion.</li>
       </ul>
     </section>
+    <Awards />
   </div>
 );
 
 export default AboutUsPage;
+

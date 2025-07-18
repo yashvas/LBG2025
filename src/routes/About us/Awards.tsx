@@ -1,19 +1,22 @@
+import React from 'react';
+
+
 const Awards = () => {
   const awards = [
     {
-      title: 'FStech Awards 2025',
+      title: 'FStech Awards 2025 🏅',
       description: 'Recognised for best use of data and consumer finance innovation.',
     },
     {
-      title: 'Business Culture Award',
+      title: 'Business Culture Award 🌟',
       description: 'Winner for cultural excellence, diversity & inclusion, and leadership.',
     },
     {
-      title: 'Princess Royal Training Award',
+      title: 'Princess Royal Training Award 🎓',
       description: 'Honoured multiple years for outstanding staff training and leadership development.',
     },
     {
-      title: 'Employee Benefits Award 2025',
+      title: 'Employee Benefits Award 2025 🧡',
       description: 'Winner for best reproductive health support and inclusive employee benefits.',
     },
   ];
@@ -22,8 +25,8 @@ const Awards = () => {
     <div style={styles.container}>
       {awards.map((award, index) => (
         <div key={index} style={styles.card}>
-          <h3>{award.title}</h3>
-          <p>{award.description}</p>
+          <h3 style={{color: "black"}}>{award.title}</h3>
+          <p style={{color: "black"}}>{award.description}</p>
         </div>
       ))}
     </div>
@@ -31,16 +34,17 @@ const Awards = () => {
 };
 
 // Inline CSS styles
-const styles = {
+// ...existing code...
+const styles: { container: React.CSSProperties; card: React.CSSProperties } = {
   container: {
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap', // Makes it responsive on smaller screens
+    flexWrap: 'wrap',
     gap: '20px',
     padding: '20px',
   },
   card: {
-    flex: '1 1 22%', // Flexible and responsive
+    flex: '1 1 22%',
     minWidth: '250px',
     backgroundColor: '#f4f4f4',
     padding: '15px',
@@ -48,5 +52,5 @@ const styles = {
     boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
   },
 };
-
+// ...existing code...
 export default Awards;
