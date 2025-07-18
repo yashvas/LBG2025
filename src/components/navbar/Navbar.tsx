@@ -6,6 +6,11 @@ import {
 } from "./Navbar.styled";
 import logo from "../../assets/LBGHorse.jpg";
 import * as routes from "../../routes/manifest";
+import { Link } from "react-router-dom";
+
+// ...existing code...
+
+<Link to="/about">About Us</Link>
 
 export default function Navbar() {
   return (
@@ -17,6 +22,8 @@ export default function Navbar() {
           Sustainability
         </StyledNavItem>
         <StyledNavItem href={routes.Careers}>Careers</StyledNavItem>
+        <StyledNavItem href={routes.Savings}>Savings</StyledNavItem>
+        <StyledNavItem href={routes.AboutUs}>About Us</StyledNavItem>
       </StyledNavItemsContainer>
     </StyledNavContainer>
   );

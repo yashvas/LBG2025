@@ -10,23 +10,16 @@ export const StyledProgressDiv = styled.div`
 `;
 
 export const ProgressFill = styled.div`
-  height: 100%;
+  height: 20px;
   width: 100%;
-  background: linear-gradient(
-    to right,
-    red 0%,
-    orange 25%,
-    yellow 50%,
-    lime 75%,
-    green 100%
-  );
+  background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(17, 182, 122, 1) 100%);
   position: absolute;
   top: 0;
   left: 0;
 `;
 
 export const WhiteFill = styled.div<{ progress: number }>`
-  height: 100%;
+  height: 20px;
   width: 100%;
   background: white;
   position: absolute;
